@@ -1,5 +1,5 @@
 ## 1. Generate keys
----
+
 ```bash
 ssh-keygen 
 ```
@@ -10,7 +10,7 @@ ssh-keygen
 
 
 ## 2. List the keys
----
+
 ```bash
 # Default directory for storing SSH keys
 ls ~/.ssh/
@@ -36,7 +36,7 @@ rm ~/.ssh/<key-name>.pub
 
 
 ## 3. How to use the keys
----
+
 First print out the public key:
 ```bash
 cat ~/.ssh/<key-name>.pub

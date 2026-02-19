@@ -2,14 +2,14 @@
 It is assumed here that  
 
 ## 1. Install `macchanger`
----
+
 ```bash
 paru -S macchanger
 ```
 
 
 ## 2. Create a systemd service
----
+
 systemd service file: `/etc/systemd/system/macspoof@.service`
 
 ```bash
@@ -41,7 +41,7 @@ It is a `one-shot` service so it runs only once and is shown as active by `syste
 
 
 ## 3. Stop NetworkManager from overriding
----
+
 NetworkManager config file: `/etc/NetworkManager/NetworkManager.conf`
 
 ```bash
@@ -55,7 +55,7 @@ wifi.cloned-mac-address=preserve
 
 
 ## 4. Enable and start the service
----
+
 ```bash
 sudo systemctl daemon-reload
 sudo systemctl enable macspoof@wlan0.service
@@ -64,7 +64,7 @@ sudo systemctl start macspoof@wlan0.service
 
 
 ## 5. Verify that it works
----
+
 ```bash
 macchanger --show wlan0
 ```

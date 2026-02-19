@@ -1,12 +1,12 @@
 ## 1. Enable and start the sshd service
----
+
 ```bash
 sudo systemctl enable --now sshd
 ```
 
 
 ## 2. Check the `HostName` or `Host` of the service
----
+
 SSH config file: `~/.ssh/config`
 ```bash
 # Main GitHub account
@@ -33,7 +33,7 @@ Host dojo
 
 
 ## 3. Attempt to connect the service
----
+
 ```bash
 # Test the connection
 ssh -T <Host/HostName>
