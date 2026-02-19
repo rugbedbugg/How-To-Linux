@@ -4,9 +4,9 @@
 ssh-keygen 
 ```
 - Make a note of where the key will be stored. (1st prompt)
-- Go through the setup
+- Go through the setup.
 - Use default options if not sure. 
-- For a casual user, the time to expire can be set to `never`
+- For a casual user, the time to expire for the key can be set to `never`
 
 
 ## 2. List the keys
@@ -31,8 +31,14 @@ ssh-add -d ~/.ssh/<key-name>
 rm ~/.ssh/<key-name>
 rm ~/.ssh/<key-name>.pub
 ```
-- SSH keys are used to provide secure, passwordless authentication for remote access to systems over unsecured networks.
-- They replace traditional password-based login methods, which are vulnerable to brute-force attacks, credential theft, and replay attacks.
+- SSH keys are used to provide 
+  - secure, 
+  - passwordless authentication 
+for remote access to systems over unsecured networks.
+- They replace traditional password-based login methods, which are vulnerable to 
+  - brute-force attacks, 
+  - credential theft, 
+  - and replay attacks.
 
 
 ## 3. How to use the keys
@@ -58,7 +64,7 @@ If yes, kill all processes. Run only one process.
 pkill ssh-agent && eval "$(ssh-agent -s)"
 pgrep ssh-agent
 ```
-3.3. Add the private key to the agent
+3.3. Add the private key to the agent.  
 The private key doesn't have a file extension.
 ```bash
 ssh-add ~/.ssh/<key-name>

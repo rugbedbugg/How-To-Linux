@@ -1,4 +1,4 @@
-## 1. Enable and start the sshd service
+## 1. Enable and start the `sshd` service
 
 ```bash
 sudo systemctl enable --now sshd
@@ -32,7 +32,7 @@ Host dojo
 ```
 
 
-## 3. Attempt to connect the service
+## 3. Attempt to connect to the service
 
 ```bash
 # Test the connection
@@ -42,5 +42,5 @@ ssh -T <Host/HostName>
 ssh <Host/HostName>
 ```
 NOTE:
-- Github will show connection successful but it doesn't provide a shell.
+- Github will show a connection successful message but it doesn't provide a shell.
 - pwn.college provides a shell when there is an active challenge.
