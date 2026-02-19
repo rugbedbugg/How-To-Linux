@@ -23,4 +23,4 @@ If you don't have a GPG key setup. Set it up first.
 ```bash
 paru -S lazygit github-desktop-bin
 ```
-These are simpler to use and have a lower skill ceiling.
+These are graphical-based, but are simpler to use and have a lower skill ceiling.
