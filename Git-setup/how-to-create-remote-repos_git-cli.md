@@ -39,7 +39,7 @@ And a repo with the name `project-dir` will be created locally.
 ### How to have this local repo as a remote repo in GitHub
 
 - Goto [Github](https://github.com) to create a repo.
-- Copy the `https:// ... .git` url available via the `Code` button
+- Copy either `https:// ... .git`(HTTP) or `git@ ... .git`(SSH) available via the `Code` button
 - Come back into the terminal and inside the repository, run:
 
 ### i. If SSH url used
