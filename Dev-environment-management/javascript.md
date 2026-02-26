@@ -37,7 +37,7 @@ nvm install --lts       # install the latest version
 
 1. Only for the current terminal session
 ```bash
-nvm user <version>
+nvm use <version>
 ```
 
 2. For all terminal sessions (set as default)
@@ -104,7 +104,8 @@ echo "<version>" > .node-version
 fnm install
 ```
 
-### Auto-detect and set node version (as set in `.node-version` OR `.nvmrc`)
+### Auto-detect and set node version (as set in `.node-version` OR `.nvmrc`) 
+This is a global setting
 ```bash
 eval "$(fnm env --use-on-cd)"
 ```
