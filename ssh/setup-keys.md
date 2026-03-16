@@ -1,12 +1,20 @@
+# SSH Keys: Setup & Management
+
+How to generate, list, delete, and use SSH keys, plus handy `~/.ssh/config` aliases.
+
 ## 1. Generate keys
 
 ```bash
-ssh-keygen 
+ssh-keygen -t ed25519 -a 100 -C "<your-email>"
 ```
-- Make a note of where the key will be stored. (1st prompt)
-- Go through the setup.
-- Use default options if not sure. 
-- For a casual user, the time to expire for the key can be set to `never`
+- `-t ed25519` picks the modern, compact, secure key type (preferred over RSA).
+- `-a 100` adds KDF rounds, making a stolen key harder to brute-force.
+- `-C` is just a label/comment to help you recognize the key.
+
+`ssh-keygen` then asks two things:
+1. **Where to save the key** — note this path; the default is `~/.ssh/id_ed25519`.
+2. **A passphrase** — set a strong one. SSH keys don't expire, so the passphrase is your only
+   protection if the private key ever leaks. Leave it empty only for throwaway/automation keys.
 
 
 ## 2. List the keys
@@ -24,20 +32,20 @@ ssh-add -l
 #   - The agent always contains the private key
 #   - The .pub public key is provided to the online service
 #   - Delete the public key from the website
-# Remove the private key like so: 
+# Remove the private key like so:
 ssh-add -d ~/.ssh/<key-name>
 
 # 3. Now delete both the public and private keys from the system
 rm ~/.ssh/<key-name>
 rm ~/.ssh/<key-name>.pub
 ```
-- SSH keys are used to provide 
-  - secure, 
-  - passwordless authentication 
+- SSH keys are used to provide
+  - secure,
+  - passwordless authentication
 for remote access to systems over unsecured networks.
-- They replace traditional password-based login methods, which are vulnerable to 
-  - brute-force attacks, 
-  - credential theft, 
+- They replace traditional password-based login methods, which are vulnerable to
+  - brute-force attacks,
+  - credential theft,
   - and replay attacks.
 
 
@@ -49,7 +57,7 @@ cat ~/.ssh/<key-name>.pub
 ```
 Supply the entire output of this command to the online service you're trying to connect to.
 
-Next add the corresponding private key (the one w/o a file extension) to the `ssh-agent`
+Next add the corresponding private key (the one w/o a file extension) to the `ssh-agent`.
 
 3.1. Make sure the agent is running.
 ```bash
@@ -64,7 +72,7 @@ If yes, kill all processes. Run only one process.
 pkill ssh-agent && eval "$(ssh-agent -s)"
 pgrep ssh-agent
 ```
-3.3. Add the private key to the agent.  
+3.3. Add the private key to the agent.
 The private key doesn't have a file extension.
 ```bash
 ssh-add ~/.ssh/<key-name>
@@ -98,4 +106,5 @@ Host dojo
   IdentityFile ~/.ssh/id_ed25519_desktop
   IdentitiesOnly yes
 ```
-Here, pwn.college is a good example. Instead of connecting using `dojo.pwn.college` we can use `dojo` as an alias.
+Here, pwn.college is a good example. Instead of connecting using `dojo.pwn.college` we can use
+`dojo` as an alias.
