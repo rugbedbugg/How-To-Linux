@@ -1,3 +1,8 @@
+# JavaScript / Node Dev Environment Management
+
+Three ways to get Node + npm on your machine, from simplest (system package) to per-project
+version management.
+
 ## [Option-1]: Setup system `nodejs` & `npm`
 
 Install using system package manager
@@ -30,7 +35,7 @@ nvm list                # or, `nvm ls`
 Install the preferred node versions to `nvm`
 ```bash
 nvm install <version>
-nvm install --lts       # install the latest version
+nvm install --lts       # install the latest LTS version
 ```
 
 ### Set a version to be used

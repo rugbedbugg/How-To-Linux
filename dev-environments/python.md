@@ -79,7 +79,7 @@ Now check if the python versions match
 ```bash
 which python            # should show ~/.pyenv/shims/python
 python --version
-pynev versions
+pyenv versions
 ```
 
 After both commands give the same output
