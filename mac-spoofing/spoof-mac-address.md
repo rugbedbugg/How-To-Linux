@@ -1,5 +1,10 @@
-# NOTE
-It is assumed here that  
+# MAC Address Spoofing
+
+Automatically randomize your Wi-Fi MAC address on every boot using `macchanger` + a `systemd`
+service.
+
+> **NOTE:** This guide assumes Arch Linux with a wireless interface named `wlan0`. Check yours
+> with `ip link` and substitute your interface name wherever `wlan0` appears below.
 
 ## 1. Install `macchanger`
 
@@ -73,7 +78,7 @@ This should display your current MAC address (spoofed) and your permanent MAC ad
 If they are different, you're now spoofing your MAC address. Your MAC address will be randomized everytime you boot/reboot your device.
 
 
-# Why should you spoof your MAC address
+## Why spoof your MAC address?
 - Prevents tracking via your real MAC address on networks.
 - Bypass/evade MAC-based Wi-Fi restrictions Ex:whitelists/blacklists in phone hotspots.
 - Anonymity- Harder to identify and profile your device on public or monitored networks.
