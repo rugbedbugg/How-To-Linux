@@ -10,29 +10,29 @@ otherwise re-google every few months. Written as terminal-first cheatsheets.
 ## Contents
 
 ### Git
-- [Git CLI setup](git/setup-cli.md) — identity, signed commits (SSH & GPG), GUI tools
-- [Creating remote repos from the terminal](git/create-remote-repos.md) — `gh` and plain-`git` workflows
+- [Git CLI setup](git/setup-cli.md)
+- [Creating remote repos from the terminal](git/create-remote-repos.md)
 
 ### SSH
-- [SSH keys: setup & management](ssh/setup-keys.md) — generate, list, delete, use, config aliases
-- [Connecting via SSH](ssh/connect.md) — the `sshd` service and connecting by alias
+- [SSH keys: setup & management](ssh/setup-keys.md)
+- [Connecting via SSH](ssh/connect.md)
 
 ### Dev environments
-- [Python](dev-environments/python.md) — `venv`, `uv`, and `pyenv` version management
-- [JavaScript / Node](dev-environments/javascript.md) — system Node, `nvm`, and `fnm`
+- [Python](dev-environments/python.md)
+- [JavaScript / Node](dev-environments/javascript.md)
 
 ### WSL (Arch on Windows)
-- [Arch on WSL2: first-boot setup](wsl/setup-arch-wsl.md) — sudo user, `wheel`, `wsl.conf`, systemd
-- [Windows interop](wsl/windows-interop.md) — drives, symlinks, `explorer.exe`, the `/mnt/c` speed trap
+- [Arch on WSL2: first-boot setup](wsl/setup-arch-wsl.md)
+- [Windows interop](wsl/windows-interop.md)
 
 ### Security
-- [SSH commit signing](security/ssh-commit-signing.md) — the GitHub Verified badge, and the scope gotcha
-- [Encrypted vault (gocryptfs)](security/encrypted-vault-gocryptfs.md) — a password-locked folder
-- [Keeping secrets out of git](security/git-secrets.md) — global gitignore, git-crypt, SOPS + age
+- [SSH commit signing](security/ssh-commit-signing.md)
+- [Encrypted vault (gocryptfs)](security/encrypted-vault-gocryptfs.md)
+- [Keeping secrets out of git](security/git-secrets.md)
 
 ### Networking / privacy
-- [MAC address spoofing](mac-spoofing/spoof-mac-address.md) — randomize your MAC on every boot
+- [MAC address spoofing](mac-spoofing/spoof-mac-address.md)
 
 ## License
 
-[MIT](LICENSE) — use freely, no warranty.
+[MIT](LICENSE)
